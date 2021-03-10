@@ -41,11 +41,11 @@
       <sup>3</sup>University of Pennsylvania
   </div>
   <div class="link">
-    <a href="#" target="_blank">[Paper]</a>&nbsp;
-    <a href="#" target="_blank">[Code]</a>
+    <a href="https://arxiv.org/abs/1904.03797">[Paper]</a>&nbsp;
+    <a href="https://github.com/taokong/FoveaBox">[Code]</a>
   </div>
   <div class="teaser">
-    <img src="https://via.placeholder.com/300x100">
+    <img src="files/foveabox.jpg" width="90%">
   </div>
 </div>
 <!-- === Home Section Ends === -->
@@ -55,8 +55,13 @@
 <div class="section">
   <div class="title">Overview</div>
   <div class="body">
-    Simple description of the project. Please don't directly copy and paste the abstract.
-    Make the brief summary of your work in layman English, and explain why it is interesting and important.
+    FoveaBox is an accurate, flexible and completely anchor-free object detection system for object detection framework.
+      Different from previous anchor-based methods,
+      FoveaBox directly learns the object existing possibility and the bounding box coordinates without anchor reference.
+      This is achieved by: (a) predicting category-sensitive semantic maps for the object existing possibility,
+      and (b) producing category-agnostic bounding box for each position that potentially contains an object.
+      FoveaBox avoids all computation and hyper-parameters related to anchor boxes,
+      which are often sensitive to the final detection performance.
   </div>
 </div>
 <!-- === Overview Section Ends === -->
@@ -66,25 +71,36 @@
 <div class="section">
   <div class="title">Results</div>
   <div class="body">
-    Image or GIF results here. The highlight of the work.
-
+      Object detection single-model results v.s. state-of-the-arts on COCO test-dev.
+      We show results for FoveaBox models with 800 input scale.
+      FoveaBox-align indicates utilizing feature alignment
     <!-- Adjust the number of rows and columns (EVERY project differs). -->
     <table width="100%" style="margin: 20pt 0; text-align: center;">
       <tr>
-        <td><img src="https://via.placeholder.com/300x100" width="90%"></td>
+        <td><img src="files/sota.png" width="80%"></td>
       </tr>
     </table>
 
-    Demo video here.
+      Qualitative comparison of RetinaNet (left) and FoveaBox (right).
+      Our model shows improvements in classes with large aspect ratios. Better viewed in color.
+    <!-- Adjust the number of rows and columns (EVERY project differs). -->
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="files/result.png" width="80%"></td>
+      </tr>
+    </table>
 
-    <!-- Adjust the frame size based on the demo (EVERY project differs). -->
-    <div style="position: relative; padding-top: 50%; margin: 20pt 0; text-align: center;">
-      <iframe src="https://via.placeholder.com/900x450" frameborder=0
-              style="position: absolute; top: 2.5%; left: 2.5%; width: 95%; height: 100%;"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-    </div>
-  </div>
+
+<!--      -->
+<!--    Demo video here.-->
+<!--    &lt;!&ndash; Adjust the frame size based on the demo (EVERY project differs). &ndash;&gt;-->
+<!--    <div style="position: relative; padding-top: 50%; margin: 20pt 0; text-align: center;">-->
+<!--      <iframe src="https://via.placeholder.com/900x450" frameborder=0-->
+<!--              style="position: absolute; top: 2.5%; left: 2.5%; width: 95%; height: 100%;"-->
+<!--              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+<!--              allowfullscreen></iframe>-->
+<!--    </div>-->
+<!--  </div>-->
 </div>
 <!-- === Result Section Ends === -->
 
@@ -93,42 +109,15 @@
 <div class="section">
   <div class="bibtex">BibTeX</div>
 <pre>
-@article{alias,
-  title   = {},
-  author  = {},
-  journal = {},
-  year    = {}
+@article{kong2019foveabox,
+  title={FoveaBox: Beyond Anchor-based Object Detector},
+  author={Kong, Tao and Sun, Fuchun and Liu, Huaping and Jiang, Yuning and Li, Lei and Shi, Jianbo},
+  journal={IEEE Transactions on Image Processing},
+  pages={7389--7398},
+  year={2020}
 }
+
 </pre>
-
-  <!-- BZ: we should give other related work enough credits, -->
-  <!--     so please include some most relevant work and leave some comment to summarize work and the difference. -->
-  <div class="ref">Related Work</div>
-  <div class="citation">
-    <div class="image"><img src="https://via.placeholder.com/300x100"></div>
-    <div class="comment">
-      <a href="#" target="_blank">
-        Authors.
-        Paper Title.
-        Conference Name & Year.</a><br>
-      <b>Comment:</b>
-      This is a short comment.
-    </div>
-  </div>
-  <div class="citation">
-    <div class="image"><img src="https://via.placeholder.com/300x100"></div>
-    <div class="comment">
-      <a href="#" target="_blank">
-        Authors.
-        Paper Title.
-        Conference Name & Year.</a><br>
-      <b>Comment:</b>
-      This is a long comment. This comment is just used to test how long comments can fit the template.
-    </div>
-  </div>
-</div>
-<!-- === Reference Section Ends === -->
-
 
 </body>
 </html>
