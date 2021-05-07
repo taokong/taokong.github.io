@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- === Header Starts === -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>SOLO: Segmenting Objects by Locations</title>
+
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/font.css" rel="stylesheet" type="text/css">
+  <link href="./assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<!-- === Header Ends === -->
+
+
+<body>
+
+<!-- === Home Section Starts === -->
+<div class="section">
+  <!-- === Title Starts === -->
+  <div class="header">
+    <div class="title", style="padding-top: 25pt;">  <!-- Set padding as 10 if title is with two lines. -->
+      SOLO: Segmenting Objects by Locations
+    </div>
+  </div>
+  <!-- === Title Ends === -->
+  <div class="author">
+      <a href="https://www.xloong.wang">Xinlong Wang</a><sup>1</sup>,&nbsp;
+    <a href="http://www.taokong.org">Tao Kong</a><sup>2</sup>,&nbsp;
+    <a href="https://cshen.github.io/">Chunhua Shen</a><sup>1</sup>,&nbsp;
+      <a href="https://scholar.google.com/citations?user=Z7v-NA4AAAAJ&hl=zh-CN">Yuning Jiang</a><sup>2</sup>,&nbsp;
+      <a href="https://lileicc.github.io">Lei Li</a><sup>2</sup>
+  </div>
+  <div class="institution">
+      <sup>1</sup>The University of Adelaide,&nbsp;&nbsp;&nbsp;
+      <sup>2</sup>ByteDance AI Lab
+  </div>
+  <div class="link">
+    <a href="https://arxiv.org/abs/1912.04488">[Paper]</a>&nbsp;
+    <a href="https://github.com/WXinlong/SOLO">[Code]</a>
+  </div>
+  <div class="teaser">
+    <img src="files/maskrcnnvssolo.png" width="90%">
+  </div>
+</div>
+<!-- === Home Section Ends === -->
+
+
+<!-- === Overview Section Starts === -->
+<div class="section">
+  <div class="title">Overview</div>
+  <div class="body">
+    SOLO is totally box-free instance segmentation framework thus not being restricted by (anchor) box locations and scales,
+    and naturally benefits from the inherent advantages of FCNs.
+    Our method takes an image as input, directly outputs instance masks and corresponding class probabilities,
+    in a fully convolutional, box-free and grouping-free paradigm.
+  </div>
+</div>
+<!-- === Overview Section Ends === -->
+
+
+<!-- === Result Section Starts === -->
+<div class="section">
+  <div class="title">Visualization</div>
+  <div class="body">
+      Visualization of instance segmentation results using the Res-101-FPN backbone.
+    The model is trained on the COCO train2017 dataset, achieving a mask AP of 37.8 on the COCO test-dev.
+    <!-- Adjust the number of rows and columns (EVERY project differs). -->
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="files/vis.png" width="80%"></td>
+      </tr>
+    </table>
+
+      SOLO is also able to perform r instance contour detection.
+    <!-- Adjust the number of rows and columns (EVERY project differs). -->
+    <table width="100%" style="margin: 20pt 0; text-align: center;">
+      <tr>
+        <td><img src="files/vis_edge.png" width="80%"></td>
+      </tr>
+    </table>
+
+
+<!--      -->
+<!--    Demo video here.-->
+<!--    &lt;!&ndash; Adjust the frame size based on the demo (EVERY project differs). &ndash;&gt;-->
+<!--    <div style="position: relative; padding-top: 50%; margin: 20pt 0; text-align: center;">-->
+<!--      <iframe src="https://via.placeholder.com/900x450" frameborder=0-->
+<!--              style="position: absolute; top: 2.5%; left: 2.5%; width: 95%; height: 100%;"-->
+<!--              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+<!--              allowfullscreen></iframe>-->
+<!--    </div>-->
+  </div>
+</div>
+<!-- === Result Section Ends === -->
+
+
+<!-- === Reference Section Starts === -->
+<div class="section">
+  <div class="bibtex">BibTeX</div>
+<pre>
+@inproceedings{wang2020solo,
+  title     =  {{SOLO}: Segmenting Objects by Locations},
+  author    =  {Wang, Xinlong and Kong, Tao and Shen, Chunhua and Jiang, Yuning and Li, Lei},
+  booktitle =  {Proc. Eur. Conf. Computer Vision (ECCV)},
+  year      =  {2020}
+}
+@article{wang2020solov2,
+  title={SOLOv2: Dynamic and Fast Instance Segmentation},
+  author={Wang, Xinlong and Zhang, Rufeng and  Kong, Tao and Li, Lei and Shen, Chunhua},
+  journal={Proc. Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2020}
+}
+
+</pre>
+</div>
+
+</body>
+
+</html>
